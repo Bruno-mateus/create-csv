@@ -1,0 +1,11 @@
+{
+  "name": "nodd",
+  "version": "1.0.0",
+  "description": "write in csv files",
+  "main": "index.js",
+  "author": "Bruno",
+  "license": "MIT",
+  "dependencies": {
+    "csv-writer": "^1.6.0"
+  }
+}
