@@ -7,18 +7,22 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const csvWriter = createCsvWriter({
     path: 'file.csv',
     header: [
-        {id: 'cod', title: 'codigo produto'},
+        {id: 'cod', title:''},
     ]
 });
  
 const records = []
 
 files.forEach((file) => {
+    const typeFile = file.split('.')[1]
+    
 
     records.push({
-        cod:file.split('.jpg').slice(0,1)
-    })     
+        cod:file.split(`.${typeFile}`).slice(0,1),
+        
+    })
 
+    console.log(file)
 })
 
 
